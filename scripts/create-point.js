@@ -43,3 +43,38 @@ document.querySelector("select[name=uf]").addEventListener('change',getCities);
 //itens de coleta
 
 const itemstoCollet = document.querySelectorAll(".items-grid li")
+
+for(const item of itemstoCollet){
+    item.addEventListener("click",handleSelectedItem);
+}
+
+const collectedItems = document.querySelector("input[name=items]");
+let selectedItems = [];
+
+function handleSelectedItem(event){
+    const itemLi = event.target;
+    const itemID = itemLi.dataset.id;
+    // adicionar ou retirar uma class css toggle
+    itemLi.classList.toggle("selected");
+
+    //verificar se tem itens selecionados
+    // se sim pegar os itens
+    const alreadSelected = selectedItems.findIndex(item => {
+        const itemFound = item === itemID;//TRUE OR FALSE
+        return itemFound;
+    }) // ou item => item === itemID
+       //se estiver selecionado, tirar da selecao
+    if (alreadSelected >= 0){
+        //remover seleção
+        const filteredItems = selectedItems.filter(item=>{
+            const itemDifferent = item != itemID; // FALSE
+            return itemDifferent;
+        })
+        selectedItems = filteredItems;
+    }else{
+        selectedItems.push(itemID);
+    }  
+    //atualizar o campo escondido com os itens selecionados
+    collectedItems.value = selectedItems;
+
+}
