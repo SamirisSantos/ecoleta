@@ -4,6 +4,13 @@ const server = express()
 //configurar pasta publica
 server.use(express.static("public"))
 
+// utilizando tempalte engine
+const nunjucks = require("nunjucks")
+nunjucks.configure("src/view", {
+    express: server,
+    noCache: true
+})
+
 //pagina inicial
 server.get("/", (req,res)=>{
     res.sendFile(__dirname + "/views/index.html")
