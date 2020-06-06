@@ -2,7 +2,7 @@
 
 > Projeto criado durante a semana Next Level Week idealizado pela Rockseat
 
-> Projeto Web fullstack Starter, lecionado pelo [Mark Brito] [https://www.linkedin.com/in/maykbrito/]
+> Projeto Web fullstack Starter, lecionado pelo [Mark Brito][https://www.linkedin.com/in/maykbrito/]
 
 ## Tecnologias
 * Javascript
@@ -12,6 +12,6 @@
 * Nunjucks
 * SQL
 
-[Rockseat] [https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg]
+[Rockseat][https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg]
 
-[**Samiris Santo**] [https://www.linkedin.com/in/samiris-santos/]
+[**Samiris Santos**][https://www.linkedin.com/in/samiris-santos/]
