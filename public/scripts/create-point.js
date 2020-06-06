@@ -56,13 +56,14 @@ function handleSelectedItem(event){
     const itemID = itemLi.dataset.id;
     // adicionar ou retirar uma class css toggle
     itemLi.classList.toggle("selected");
-
+    //console.log("Item id", itemID)
     //verificar se tem itens selecionados
     // se sim pegar os itens
     const alreadSelected = selectedItems.findIndex(item => {
         const itemFound = item === itemID;//TRUE OR FALSE
         return itemFound;
     }) // ou item => item === itemID
+
        //se estiver selecionado, tirar da selecao
     if (alreadSelected >= 0){
         //remover seleção
@@ -73,7 +74,8 @@ function handleSelectedItem(event){
         selectedItems = filteredItems;
     }else{
         selectedItems.push(itemID);
-    }  
+    } 
+    //console.log('selectedItem:', selectedItems) 
     //atualizar o campo escondido com os itens selecionados
     collectedItems.value = selectedItems;
 
