@@ -5,7 +5,7 @@
 const db = new sqlite3.Database("./src/datebase/database.db")
 
 
-module.export = db
+module.exports = db
 
 //CRUD SQL
 /*db.serialize(()=>{
