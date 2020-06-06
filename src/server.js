@@ -1,5 +1,7 @@
 const express = require ("express")
 const server = express()
+//inserir DB
+const db = require("./datebase/db")
 
 //configurar pasta publica
 server.use(express.static("public"))
